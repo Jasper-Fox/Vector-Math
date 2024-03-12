@@ -1,17 +1,15 @@
-using System;
 using UnityEngine;
 
 public class Vector : MonoBehaviour
 {
-    public Vector3 Axis;
+    public GameObject Source;
+    
+    private Vector3 Axis;
 
     private void Start()
     {
+        Axis = Source.transform.localScale;
         transform.position = Axis.normalized;
     }
 
-    void Update()
-    {
-        
-    }
 }

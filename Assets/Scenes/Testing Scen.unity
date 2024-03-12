@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: 0
-  rotationSpeed: {x: 4, y: 48, z: 66}
+  Source: {fileID: 496945542}
 --- !u!135 &366868282
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -578,6 +578,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466127058}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &496945542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496945543}
+  m_Layer: 0
+  m_Name: Rotation Angle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &496945543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496945542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.02, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 48, z: 66}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742752619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cf7cb7df5113f48ba7272efc33a886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Axis: {x: 0.04, y: 0.48, z: 0.66}
+  Source: {fileID: 496945542}
 --- !u!65 &1305285759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1364,7 +1395,8 @@ GameObject:
   - component: {fileID: 1410269918}
   - component: {fileID: 1410269917}
   - component: {fileID: 1410269916}
-  - component: {fileID: 1410269915}
+  - component: {fileID: 1410269920}
+  - component: {fileID: 1410269921}
   m_Layer: 0
   m_Name: Sphere Quat
   m_TagString: Untagged
@@ -1372,20 +1404,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1410269915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410269914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472026bf4cc897e4499c9c89d957ce00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Axis: {x: 4, y: 48, z: 66}
-  Angle: 45
 --- !u!135 &1410269916
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1474,6 +1492,39 @@ Transform:
   - {fileID: 1810013898}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1410269920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410269914}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc438f1fe43b740499a52062ff30406f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeRotation: 1
+  axis: {x: 1, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
+  angle: 45
+  multiply: 0
+  multiplyAxis: {x: 0, y: 0, z: 0}
+  multiplyAngle: 0
+--- !u!114 &1410269921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410269914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed08ad6bdfd51a8478fe9c4c36c3509b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 496945542}
+  Angle: 90
 --- !u!1 &1516459327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,8 +1557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02817479a757d8847be85ff693a8cf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localRotation: 0
-  rotationSpeed: {x: 4, y: 48, z: 66}
+  LocalRotation: 0
+  Source: {fileID: 496945542}
 --- !u!135 &1516459329
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1717,7 +1768,7 @@ Transform:
   m_GameObject: {fileID: 1606008625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.33, y: 0, z: 0}
+  m_LocalPosition: {x: -2.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1737,7 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972eac76484fe1f4897192b2b97052ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Axis: {x: 0, y: 0, z: 0}
+  Source: {fileID: 496945542}
 --- !u!135 &1606008628
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2156,3 +2207,4 @@ SceneRoots:
   - {fileID: 1168816274}
   - {fileID: 1641105023}
   - {fileID: 306446048}
+  - {fileID: 496945543}

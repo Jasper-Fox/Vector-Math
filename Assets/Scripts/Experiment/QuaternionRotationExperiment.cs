@@ -1,9 +1,16 @@
 using UnityEngine;
 
-public class QuaternionRotation : MonoBehaviour
+public class QuaternionRotationExperiment : MonoBehaviour
 {
     public bool LocalRotation;
-    public Vector3 rotationSpeed;
+    public GameObject Source;
+    
+    private Vector3 rotationSpeed;
+    
+    private void Start()
+    {
+        rotationSpeed = Source.transform.localScale;
+    }
 
     /*
      * конвертируем вектор в кватернион: 1. домнажаем полученный кватернион на матрицу предыдущего поворота(тоесть поворачиваем по глобальному x а потом полученное доворачиваем предыдущим положением)

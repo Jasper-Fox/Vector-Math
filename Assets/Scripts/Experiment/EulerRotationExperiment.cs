@@ -1,10 +1,16 @@
 using UnityEngine;
 
-public class EulerRotation : MonoBehaviour
+public class EulerRotationExperiment : MonoBehaviour
 {
     public bool localRotation;
-    public Vector3 rotationSpeed;
+    public GameObject Source;
     
+    private Vector3 rotationSpeed;
+
+    private void Start()
+    {
+        rotationSpeed = Source.transform.localScale;
+    }
     //Вращаем вокруг заданного вектора 
     private void Update()
     {

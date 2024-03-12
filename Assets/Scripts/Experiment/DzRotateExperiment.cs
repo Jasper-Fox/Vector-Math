@@ -1,17 +1,26 @@
 using UnityEngine;
 
-public class DzRotate : MonoBehaviour
+public partial class DzRotateExperiment : MonoBehaviour
 {
-    private const float Radius = 0.05f;
-    public Vector3 Axis;
+    public GameObject Source;
     public float Angle;
 
+    private const float Radius = 0.05f;
+    private Vector3 Axis;
+
+    
     private void OnDrawGizmos()
     {
         Quaternion Qax = GetQuaternion(Axis, Angle);
         Vector3 Vax = new Vector3(Qax.x, Qax.y, Qax.z);
-        DrawVector(transform.position, Vax * 10f, Color.green);
+        DrawVector(transform.position, Vax * 10f, Color.yellow);
     }
+    
+    private void Start()
+    {
+        Axis = Source.transform.localScale;
+    }
+    
     void Update()
     {
         transform.rotation *= GetQuaternion(Axis, Angle);
