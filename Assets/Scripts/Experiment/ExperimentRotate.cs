@@ -7,11 +7,11 @@ public class ExperimentRotate : MonoBehaviour
     
     private const float Radius = 0.05f;
     private float _angle;
-    private Vector3 Axis;
+    private Vector3 _axis;
     
     private void Update()
     {
-        Axis = Source.transform.localScale;
+        _axis = Source.transform.localScale;
         transform.rotation = Rotate(transform.rotation);
     }
     
@@ -30,7 +30,7 @@ public class ExperimentRotate : MonoBehaviour
 
     private Quaternion Rotate(Quaternion transform)
     {
-        transform *= GetQuaternion(Axis);
+        transform *= GetQuaternion(_axis);
         return transform;
     }
     
@@ -43,7 +43,7 @@ public class ExperimentRotate : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        Quaternion Qax = GetQuaternion(Axis);
+        Quaternion Qax = GetQuaternion(_axis);
         Vector3 Vax = new Vector3(Qax.x, Qax.y, Qax.z);
         DrawVector(transform.position, Vax * 10f, Color.yellow);
     }

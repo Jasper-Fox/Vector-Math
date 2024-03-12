@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 306446046}
   - component: {fileID: 306446045}
   - component: {fileID: 306446044}
+  - component: {fileID: 306446049}
   m_Layer: 0
   m_Name: Vector 3
   m_TagString: Untagged
@@ -343,12 +344,25 @@ Transform:
   m_GameObject: {fileID: 306446043}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.368, y: 0.48, z: 0.66}
+  m_LocalPosition: {x: 4.328, y: 0, z: 0}
   m_LocalScale: {x: 0.071922, y: 0.071922, z: 4.08}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306446049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306446043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cf7cb7df5113f48ba7272efc33a886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 496945542}
 --- !u!1 &366868279
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36e24f4c4116b446ac61176b3c574dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localRotation: 0
+  localRotation: 1
   Source: {fileID: 496945542}
 --- !u!135 &366868282
 SphereCollider:
@@ -604,7 +618,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.02, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 48, z: 66}
+  m_LocalScale: {x: 130.84, y: 48, z: 66}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1037,6 +1051,7 @@ GameObject:
   - component: {fileID: 1168816272}
   - component: {fileID: 1168816271}
   - component: {fileID: 1168816270}
+  - component: {fileID: 1168816275}
   m_Layer: 0
   m_Name: "Vector \u044D\u043A\u0441\u043F\u0435\u0440\u0435\u043C\u0435\u043D\u0442"
   m_TagString: Untagged
@@ -1137,12 +1152,25 @@ Transform:
   m_GameObject: {fileID: 1168816268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.29, y: 0.48, z: 0.66}
+  m_LocalPosition: {x: -2.29, y: 0, z: 0}
   m_LocalScale: {x: 0.071922, y: 0.071922, z: 4.08}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168816275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168816268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cf7cb7df5113f48ba7272efc33a886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 496945542}
 --- !u!1 &1207400615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02817479a757d8847be85ff693a8cf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LocalRotation: 0
+  LocalRotation: 1
   Source: {fileID: 496945542}
 --- !u!135 &1516459329
 SphereCollider:
@@ -1980,6 +2008,7 @@ GameObject:
   - component: {fileID: 1641105021}
   - component: {fileID: 1641105020}
   - component: {fileID: 1641105019}
+  - component: {fileID: 1641105024}
   m_Layer: 0
   m_Name: Vector 2
   m_TagString: Untagged
@@ -2080,12 +2109,25 @@ Transform:
   m_GameObject: {fileID: 1641105017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.178, y: 0.48, z: 0.66}
+  m_LocalPosition: {x: 2.138, y: 0, z: 0}
   m_LocalScale: {x: 0.071922, y: 0.071922, z: 4.08}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641105024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641105017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cf7cb7df5113f48ba7272efc33a886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 496945542}
 --- !u!1 &1810013897
 GameObject:
   m_ObjectHideFlags: 0

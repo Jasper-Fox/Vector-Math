@@ -6,20 +6,20 @@ public partial class DzRotateExperiment : MonoBehaviour
     public float Angle;
 
     private const float Radius = 0.05f;
-    private Vector3 Axis;
+    private Vector3 _axis;
 
     
     private void OnDrawGizmos()
     {
-        Quaternion Qax = GetQuaternion(Axis, Angle);
+        Quaternion Qax = GetQuaternion(_axis, Angle);
         Vector3 Vax = new Vector3(Qax.x, Qax.y, Qax.z);
         DrawVector(transform.position, Vax * 10f, Color.yellow);
     }
     
     void Update()
     {
-        Axis = Source.transform.localScale;
-        transform.rotation *= GetQuaternion(Axis, Angle);
+        _axis = Source.transform.localScale;
+        transform.rotation *= GetQuaternion(_axis, Angle);
     }
 
     private Quaternion GetQuaternion(Vector3 axis, float angle)
