@@ -9,13 +9,9 @@ public class ExperimentRotate : MonoBehaviour
     private float _angle;
     private Vector3 Axis;
     
-    private void Start()
-    {
-        Axis = Source.transform.localScale;
-    }
-    
     private void Update()
     {
+        Axis = Source.transform.localScale;
         transform.rotation = Rotate(transform.rotation);
     }
     

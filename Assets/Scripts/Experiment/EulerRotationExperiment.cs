@@ -6,14 +6,11 @@ public class EulerRotationExperiment : MonoBehaviour
     public GameObject Source;
     
     private Vector3 rotationSpeed;
-
-    private void Start()
-    {
-        rotationSpeed = Source.transform.localScale;
-    }
+    
     //Вращаем вокруг заданного вектора 
     private void Update()
     {
+        rotationSpeed = Source.transform.localScale;
        // transform.eulerAngles += rotationSpeed * Time.deltaTime;
         if (localRotation)
         {

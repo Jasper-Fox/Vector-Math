@@ -16,13 +16,9 @@ public partial class DzRotateExperiment : MonoBehaviour
         DrawVector(transform.position, Vax * 10f, Color.yellow);
     }
     
-    private void Start()
-    {
-        Axis = Source.transform.localScale;
-    }
-    
     void Update()
     {
+        Axis = Source.transform.localScale;
         transform.rotation *= GetQuaternion(Axis, Angle);
     }
 
